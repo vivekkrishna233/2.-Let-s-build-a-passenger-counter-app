@@ -1,11 +1,32 @@
+let countEl = document.getElementById("count-el")
+let count= 0
+let less = count
+let val=0
 
-let myAge=35
-let humanDogRatio = 7
-let mydogAge= myAge * humanDogRatio
-console.log(mydogAge)
+let saveEl=document.getElementById("save-el")
 
-let count = 50 
-count = count+100
-count=count-25
-count=count+70
-console.log(count)
+function increment() {
+    console.log("the button was clicked")
+    count += 1 
+    countEl.textContent = count 
+   
+
+}
+
+function decrement() {
+    console.log("decrease count")
+    less = countEl.innerText-1
+    countEl.textContent = less
+
+
+}
+
+function save(){
+    console.log("saved your data ")
+    let countStr = count + "-"
+    saveEl.textContent += countStr
+    countEl.textContent = 0
+    count=0
+
+}
+
